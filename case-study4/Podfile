@@ -6,6 +6,11 @@ target 'case-study4' do
   use_frameworks!
 
   # Pods for case-study4
+  # Add the pods for the Firebase products you want to use in your app
+  # For example, to use Firebase Authentication and Cloud Firestore
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseMessaging'
 
   target 'case-study4Tests' do
     inherit! :search_paths
