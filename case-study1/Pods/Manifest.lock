@@ -1,0 +1,16 @@
+PODS:
+  - CodeScanner (1.7.0)
+
+DEPENDENCIES:
+  - CodeScanner
+
+SPEC REPOS:
+  trunk:
+    - CodeScanner
+
+SPEC CHECKSUMS:
+  CodeScanner: 2d68e41ee9583ed7216f722925432933325ddf2e
+
+PODFILE CHECKSUM: 9986f11041d5e11fe6e8f5f1b8649de85fe69101
+
+COCOAPODS: 1.14.2
