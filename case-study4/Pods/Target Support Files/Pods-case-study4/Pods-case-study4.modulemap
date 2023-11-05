@@ -1,0 +1,6 @@
+framework module Pods_case_study4 {
+  umbrella header "Pods-case-study4-umbrella.h"
+
+  export *
+  module * { export * }
+}
