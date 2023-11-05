@@ -6,6 +6,7 @@ target 'case-study3' do
   use_frameworks!
 
   # Pods for case-study3
+  pod 'Charts'
 
   target 'case-study3Tests' do
     inherit! :search_paths

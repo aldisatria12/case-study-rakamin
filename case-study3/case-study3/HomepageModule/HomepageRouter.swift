@@ -10,6 +10,8 @@ import Foundation
 protocol HomepageRouterProtocol {
     var entry: HomepageViewController? {get}
     static func startExecution() -> HomepageRouterProtocol
+    
+    func gotoDetailView(transaction: [TransactionDetail])
 }
 
 class HomepageRouter: HomepageRouterProtocol {
@@ -32,5 +34,13 @@ class HomepageRouter: HomepageRouterProtocol {
         router.entry = view
         
         return router
+    }
+    
+    func gotoDetailView(transaction: [TransactionDetail]) {
+        let detailRouter = DetailRouter.createTransactionDetail(with: transaction)
+        guard let detailView = detailRouter.entry else { return }
+        guard let viewController = self.entry else { return }
+        
+        viewController.navigationController?.pushViewController(detailView, animated: true)
     }
 }

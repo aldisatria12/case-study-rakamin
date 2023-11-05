@@ -7,35 +7,52 @@
 
 import Foundation
 import UIKit
+import Charts
 
 protocol HomepageViewProtocol {
     var presenter: HomepagePresenterProtocol? {get set}
     
-    func update(with transaction:[ChartData])
+    func update(with transaction:[Transaction])
     func update(with error:String)
 }
 
-class HomepageViewController: UIViewController, HomepageViewProtocol, UITableViewDelegate, UITableViewDataSource {
+class HomepageViewController: UIViewController, HomepageViewProtocol, UITableViewDelegate, UITableViewDataSource, ChartViewDelegate {
     
+    private let pieChartView: PieChartView = PieChartView()
     private let tableView: UITableView = UITableView()
-    private let messageLabel: UILabel = UILabel()
     
     var presenter: HomepagePresenterProtocol?
-    var transaction: [ChartData] = []
+    var transaction: [Transaction] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .blue
+        pieChartView.delegate = self
         style()
         layout()
         presenter?.viewDidLoad()
     }
     
-    func update(with transaction: [ChartData]) {
+    func update(with transaction: [Transaction]) {
         DispatchQueue.main.async { [weak self] in
             self?.transaction = transaction
-            self?.messageLabel.isHidden = true
             self?.tableView.reloadData()
+            print(transaction)
+            
+            
+            var entries = [PieChartDataEntry]()
+            
+            for x in 0 ... transaction.count - 1 {
+                entries.append(PieChartDataEntry(value: Double(transaction[x].percentage) ?? 0, label: transaction[x].label, data: transaction[x].data))
+            }
+            
+            let set = PieChartDataSet(entries: entries)
+            set.colors = ChartColorTemplates.pastel()
+            
+            let data = PieChartData(dataSet: set)
+            
+            
+            self?.pieChartView.data = data
+                    
             self?.tableView.isHidden = false
         }
     }
@@ -44,9 +61,6 @@ class HomepageViewController: UIViewController, HomepageViewProtocol, UITableVie
         DispatchQueue.main.async { [weak self] in
             self?.transaction = []
             self?.tableView.isHidden = true
-            
-            self?.messageLabel.isHidden = false
-            self?.messageLabel.text = error
         }
     }
 }
@@ -58,35 +72,21 @@ extension HomepageViewController {
         tableView.isHidden = true
         tableView.delegate = self
         tableView.dataSource = self
-        
-        
-//        messageLabel.translatesAutoresizingMaskIntoConstraints = false
-//        messageLabel.isHidden = false
-//        messageLabel.text = "Loading..."
-//        messageLabel.font = UIFont.systemFont(ofSize: 20)
-//        messageLabel.textColor = .black
-//        messageLabel.textAlignment = .center
     }
     
     func layout() {
         view.addSubview(tableView)
-        view.addSubview(messageLabel)
+        tableView.frame = CGRect(x: 0, y: 128 + self.view.frame.size.width, width: self.view.frame.size.width, height: self.view.frame.size.width)
         
-        // tableView
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
-        ])
-        
-        
-        // messageLabel
-        NSLayoutConstraint.activate([
-            messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-        
+//        barchart
+        view.addSubview(pieChartView)
+        pieChartView.frame = CGRect(x: 0, y: 128, width: self.view.frame.size.width, height: self.view.frame.size.width)
+    }
+}
+
+extension HomepageViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.tapOnDetail(transaction[indexPath.row].data)
     }
 }
 
@@ -98,7 +98,8 @@ extension HomepageViewController {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
         var content = cell.defaultContentConfiguration()
-        content.text = transaction[indexPath.row].type
+        content.text = transaction[indexPath.row].label
+        content.secondaryText = transaction[indexPath.row].percentage
         cell.contentConfiguration = content
         return cell
     }

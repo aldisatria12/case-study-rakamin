@@ -17,7 +17,7 @@ class HomepageInteractor: HomepageInteractorProtocol {
     var presenter: HomepagePresenterProtocol?
     
     func getTransactionData() {
-        guard let transaction: [ChartData] = Bundle.main.decode(file: "staticData.json") else {
+        guard let transaction: [Transaction] = Bundle.main.decode(file: "staticData.json") else {
             self.presenter?.interactorWithData(result: .failure(fatalError("Error decoding file")))
             return
         }

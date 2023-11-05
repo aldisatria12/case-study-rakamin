@@ -13,8 +13,8 @@ protocol HomepagePresenterProtocol {
     var interactor: HomepageInteractorProtocol? {get set}
     
     func viewDidLoad()
-    func interactorWithData(result: Result<[ChartData], Error>)
-    func tapOnDetail(_ transaction: ChartData)
+    func interactorWithData(result: Result<[Transaction], Error>)
+    func tapOnDetail(_ transaction: [TransactionDetail])
     
 }
 
@@ -29,7 +29,7 @@ class HomepagePresenter: HomepagePresenterProtocol {
         interactor?.getTransactionData()
     }
     
-    func interactorWithData(result: Result<[ChartData], Error>) {
+    func interactorWithData(result: Result<[Transaction], Error>) {
         switch result {
         case .success(let transaction):
             view?.update(with: transaction)
@@ -39,7 +39,7 @@ class HomepagePresenter: HomepagePresenterProtocol {
         }
     }
     
-    func tapOnDetail(_ transaction: ChartData) {
-        return
+    func tapOnDetail(_ transaction: [TransactionDetail]) {
+        router?.gotoDetailView(transaction: transaction)
     }
 }

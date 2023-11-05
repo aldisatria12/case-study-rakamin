@@ -19,15 +19,14 @@
 		3EE1859A2AF743F100028939 /* HomepageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185992AF743F100028939 /* HomepageInteractor.swift */; };
 		3EE1859C2AF7440000028939 /* HomepagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1859B2AF7440000028939 /* HomepagePresenter.swift */; };
 		3EE1859E2AF7440F00028939 /* HomepageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1859D2AF7440F00028939 /* HomepageRouter.swift */; };
-		3EE185A32AF7459400028939 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185A22AF7459400028939 /* Transaction.swift */; };
+		3EE185A32AF7459400028939 /* TransactionDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185A22AF7459400028939 /* TransactionDetail.swift */; };
 		3EE185A62AF753CB00028939 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185A52AF753CB00028939 /* DetailView.swift */; };
 		3EE185A82AF753D500028939 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185A72AF753D500028939 /* DetailInteractor.swift */; };
 		3EE185AA2AF753E500028939 /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185A92AF753E500028939 /* DetailPresenter.swift */; };
 		3EE185AC2AF753F100028939 /* DetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185AB2AF753F100028939 /* DetailRouter.swift */; };
 		3EE185AE2AF75AAB00028939 /* staticData.json in Resources */ = {isa = PBXBuildFile; fileRef = 3EE185AD2AF75AAB00028939 /* staticData.json */; };
-		3EE185BA2AF763A600028939 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185B92AF763A600028939 /* ChartData.swift */; };
 		3EE185BC2AF7669500028939 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185BB2AF7669500028939 /* LineChart.swift */; };
-		3EE185BE2AF766B700028939 /* DonutChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185BD2AF766B700028939 /* DonutChart.swift */; };
+		3EE185BE2AF766B700028939 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE185BD2AF766B700028939 /* Transaction.swift */; };
 		565C28C31F2C4F322C21A8CE /* Pods_case_study3_case_study3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1039974FC170994B79768588 /* Pods_case_study3_case_study3UITests.framework */; };
 		5E228FA652F950382B038B72 /* Pods_case_study3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3485E3B6D17D7754FE34DF8 /* Pods_case_study3.framework */; };
 		8D3B78D7561629EB7CC95BC0 /* Pods_case_study3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65BD3FDF7ED079AD8DF45D62 /* Pods_case_study3Tests.framework */; };
@@ -70,15 +69,14 @@
 		3EE185992AF743F100028939 /* HomepageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageInteractor.swift; sourceTree = "<group>"; };
 		3EE1859B2AF7440000028939 /* HomepagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepagePresenter.swift; sourceTree = "<group>"; };
 		3EE1859D2AF7440F00028939 /* HomepageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomepageRouter.swift; sourceTree = "<group>"; };
-		3EE185A22AF7459400028939 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		3EE185A22AF7459400028939 /* TransactionDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionDetail.swift; sourceTree = "<group>"; };
 		3EE185A52AF753CB00028939 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3EE185A72AF753D500028939 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
 		3EE185A92AF753E500028939 /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		3EE185AB2AF753F100028939 /* DetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRouter.swift; sourceTree = "<group>"; };
 		3EE185AD2AF75AAB00028939 /* staticData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = staticData.json; sourceTree = "<group>"; };
-		3EE185B92AF763A600028939 /* ChartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
 		3EE185BB2AF7669500028939 /* LineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
-		3EE185BD2AF766B700028939 /* DonutChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonutChart.swift; sourceTree = "<group>"; };
+		3EE185BD2AF766B700028939 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		65BD3FDF7ED079AD8DF45D62 /* Pods_case_study3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_case_study3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A5577D07CDDF278AAFE968 /* Pods-case-study3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-case-study3.release.xcconfig"; path = "Target Support Files/Pods-case-study3/Pods-case-study3.release.xcconfig"; sourceTree = "<group>"; };
 		B0C035C0E1593625F9A2E486 /* Pods-case-study3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-case-study3Tests.release.xcconfig"; path = "Target Support Files/Pods-case-study3Tests/Pods-case-study3Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,10 +183,9 @@
 		3EE1859F2AF7457800028939 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				3EE185A22AF7459400028939 /* Transaction.swift */,
-				3EE185B92AF763A600028939 /* ChartData.swift */,
+				3EE185A22AF7459400028939 /* TransactionDetail.swift */,
 				3EE185BB2AF7669500028939 /* LineChart.swift */,
-				3EE185BD2AF766B700028939 /* DonutChart.swift */,
+				3EE185BD2AF766B700028939 /* Transaction.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -238,6 +235,7 @@
 				3EE1855F2AF741DB00028939 /* Sources */,
 				3EE185602AF741DB00028939 /* Frameworks */,
 				3EE185612AF741DB00028939 /* Resources */,
+				01931EDD814F48B112B0D7DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +273,7 @@
 				3EE1857F2AF741DC00028939 /* Sources */,
 				3EE185802AF741DC00028939 /* Frameworks */,
 				3EE185812AF741DC00028939 /* Resources */,
+				E9E8CF180CC05B4CEE800678 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -357,6 +356,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		01931EDD814F48B112B0D7DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-case-study3/Pods-case-study3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-case-study3/Pods-case-study3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-case-study3/Pods-case-study3-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		15A1B0E2CA52767073611DEA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -423,6 +439,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E9E8CF180CC05B4CEE800678 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-case-study3-case-study3UITests/Pods-case-study3-case-study3UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-case-study3-case-study3UITests/Pods-case-study3-case-study3UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-case-study3-case-study3UITests/Pods-case-study3-case-study3UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -430,19 +463,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EE185BE2AF766B700028939 /* DonutChart.swift in Sources */,
+				3EE185BE2AF766B700028939 /* Transaction.swift in Sources */,
 				3EE1856B2AF741DB00028939 /* ViewController.swift in Sources */,
 				3EE185A82AF753D500028939 /* DetailInteractor.swift in Sources */,
 				3EE185672AF741DB00028939 /* AppDelegate.swift in Sources */,
 				3EE185AC2AF753F100028939 /* DetailRouter.swift in Sources */,
-				3EE185BA2AF763A600028939 /* ChartData.swift in Sources */,
 				3EE1859E2AF7440F00028939 /* HomepageRouter.swift in Sources */,
 				3EE185A62AF753CB00028939 /* DetailView.swift in Sources */,
 				3EE185982AF743DA00028939 /* HomepageView.swift in Sources */,
 				3EE1859A2AF743F100028939 /* HomepageInteractor.swift in Sources */,
 				3EE1859C2AF7440000028939 /* HomepagePresenter.swift in Sources */,
 				3EE185692AF741DB00028939 /* SceneDelegate.swift in Sources */,
-				3EE185A32AF7459400028939 /* Transaction.swift in Sources */,
+				3EE185A32AF7459400028939 /* TransactionDetail.swift in Sources */,
 				3EE185AA2AF753E500028939 /* DetailPresenter.swift in Sources */,
 				3EE185BC2AF7669500028939 /* LineChart.swift in Sources */,
 			);
