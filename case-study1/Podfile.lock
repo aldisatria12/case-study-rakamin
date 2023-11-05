@@ -1,16 +1,16 @@
 PODS:
-  - CodeScanner (1.7.0)
+  - QR-Code-Scanner-iOS (1.0.0)
 
 DEPENDENCIES:
-  - CodeScanner
+  - QR-Code-Scanner-iOS (~> 1.0)
 
 SPEC REPOS:
   trunk:
-    - CodeScanner
+    - QR-Code-Scanner-iOS
 
 SPEC CHECKSUMS:
-  CodeScanner: 2d68e41ee9583ed7216f722925432933325ddf2e
+  QR-Code-Scanner-iOS: 6633d5157a50467d66ab357af2432b576c702e5e
 
-PODFILE CHECKSUM: 9986f11041d5e11fe6e8f5f1b8649de85fe69101
+PODFILE CHECKSUM: 588c9c416e50170f58c9b0a8881780c336769148
 
 COCOAPODS: 1.14.2

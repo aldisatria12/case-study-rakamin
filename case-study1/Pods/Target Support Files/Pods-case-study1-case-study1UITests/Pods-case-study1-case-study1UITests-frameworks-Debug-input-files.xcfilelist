@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-case-study1-case-study1UITests/Pods-case-study1-case-study1UITests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/CodeScanner/CodeScanner.framework
+${BUILT_PRODUCTS_DIR}/QR-Code-Scanner-iOS/QRCodeScanner.framework

@@ -6,7 +6,7 @@ target 'case-study1' do
   use_frameworks!
 
   # Pods for case-study1
-  pod 'CodeScanner'
+  pod 'QR-Code-Scanner-iOS', '~> 1.0'
 
   target 'case-study1Tests' do
     inherit! :search_paths

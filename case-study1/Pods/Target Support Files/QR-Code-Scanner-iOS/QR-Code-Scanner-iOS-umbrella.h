@@ -10,8 +10,7 @@
 #endif
 #endif
 
-#import "CodeScanner.h"
 
-FOUNDATION_EXPORT double CodeScannerVersionNumber;
-FOUNDATION_EXPORT const unsigned char CodeScannerVersionString[];
+FOUNDATION_EXPORT double QRCodeScannerVersionNumber;
+FOUNDATION_EXPORT const unsigned char QRCodeScannerVersionString[];
 
