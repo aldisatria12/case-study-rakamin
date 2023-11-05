@@ -10,9 +10,19 @@ import Foundation
 protocol HomeRouterProtocol {
     var entry: HomeViewController? {get}
     static func startExecution() -> HomeRouterProtocol
+    
+    func gotoPaymentView(transaction: TransactionHistory)
 }
 
 class HomeRouter: HomeRouterProtocol {
+    func gotoPaymentView(transaction: TransactionHistory) {
+        let detailRouter = PaymentRouter.startExecution(with: transaction)
+            guard let detailView = detailRouter.entry else { return }
+            guard let viewController = self.entry else { return }
+            
+            viewController.navigationController?.pushViewController(detailView, animated: true)
+    }
+    
     var entry: HomeViewController?
     
     static func startExecution() -> HomeRouterProtocol {

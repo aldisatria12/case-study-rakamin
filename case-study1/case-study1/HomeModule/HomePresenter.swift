@@ -14,9 +14,14 @@ protocol HomePresenterProtocol {
     
     func viewDidLoad()
     
+    func toPaymentPage(transaction: TransactionHistory)
 }
 
 class HomePresenter: HomePresenterProtocol {
+    func toPaymentPage(transaction: TransactionHistory) {
+        router?.gotoPaymentView(transaction: transaction)
+    }
+    
     var router: HomeRouterProtocol?
     
     var view: HomeViewProtocol?

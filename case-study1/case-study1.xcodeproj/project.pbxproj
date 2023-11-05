@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		3E76C49F2AF7E0E600E8BBB8 /* TransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C49E2AF7E0E600E8BBB8 /* TransactionHistory.swift */; };
 		3E76C4A12AF7E0F100E8BBB8 /* Saldo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C4A02AF7E0F100E8BBB8 /* Saldo.swift */; };
+		3E76C4A62AF7EB0200E8BBB8 /* PaymentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C4A22AF7EB0100E8BBB8 /* PaymentInteractor.swift */; };
+		3E76C4A72AF7EB0200E8BBB8 /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C4A32AF7EB0100E8BBB8 /* PaymentPresenter.swift */; };
+		3E76C4A82AF7EB0200E8BBB8 /* PaymentRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C4A42AF7EB0200E8BBB8 /* PaymentRouter.swift */; };
+		3E76C4A92AF7EB0200E8BBB8 /* PaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C4A52AF7EB0200E8BBB8 /* PaymentView.swift */; };
 		3EB63A0F2AF7D0AE00EFB6D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB63A0E2AF7D0AE00EFB6D8 /* AppDelegate.swift */; };
 		3EB63A112AF7D0AE00EFB6D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB63A102AF7D0AE00EFB6D8 /* SceneDelegate.swift */; };
 		3EB63A132AF7D0AE00EFB6D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EB63A122AF7D0AE00EFB6D8 /* ViewController.swift */; };
@@ -48,6 +52,10 @@
 		221322A46AC875A659A0060F /* Pods_case_study1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_case_study1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E76C49E2AF7E0E600E8BBB8 /* TransactionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistory.swift; sourceTree = "<group>"; };
 		3E76C4A02AF7E0F100E8BBB8 /* Saldo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saldo.swift; sourceTree = "<group>"; };
+		3E76C4A22AF7EB0100E8BBB8 /* PaymentInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentInteractor.swift; sourceTree = "<group>"; };
+		3E76C4A32AF7EB0100E8BBB8 /* PaymentPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
+		3E76C4A42AF7EB0200E8BBB8 /* PaymentRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentRouter.swift; sourceTree = "<group>"; };
+		3E76C4A52AF7EB0200E8BBB8 /* PaymentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentView.swift; sourceTree = "<group>"; };
 		3E98D2698E9FD0A24DDA0E5A /* Pods-case-study1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-case-study1.debug.xcconfig"; path = "Target Support Files/Pods-case-study1/Pods-case-study1.debug.xcconfig"; sourceTree = "<group>"; };
 		3EB63A0B2AF7D0AE00EFB6D8 /* case-study1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "case-study1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EB63A0E2AF7D0AE00EFB6D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				3E76C49D2AF7E0D200E8BBB8 /* Entities */,
-				3EEAC03D2AF7D53D00AF16D3 /* QRScanModule */,
+				3EEAC03D2AF7D53D00AF16D3 /* PaymentModule */,
 				3EEAC03C2AF7D4CB00AF16D3 /* HistoryModule */,
 				3EEAC03B2AF7D4BA00AF16D3 /* HomeModule */,
 				3EB63A0E2AF7D0AE00EFB6D8 /* AppDelegate.swift */,
@@ -194,11 +202,15 @@
 			path = HistoryModule;
 			sourceTree = "<group>";
 		};
-		3EEAC03D2AF7D53D00AF16D3 /* QRScanModule */ = {
+		3EEAC03D2AF7D53D00AF16D3 /* PaymentModule */ = {
 			isa = PBXGroup;
 			children = (
+				3E76C4A22AF7EB0100E8BBB8 /* PaymentInteractor.swift */,
+				3E76C4A32AF7EB0100E8BBB8 /* PaymentPresenter.swift */,
+				3E76C4A42AF7EB0200E8BBB8 /* PaymentRouter.swift */,
+				3E76C4A52AF7EB0200E8BBB8 /* PaymentView.swift */,
 			);
-			path = QRScanModule;
+			path = PaymentModule;
 			sourceTree = "<group>";
 		};
 		A7FED19C039DB401BC97BCE2 /* Pods */ = {
@@ -453,12 +465,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E76C4A12AF7E0F100E8BBB8 /* Saldo.swift in Sources */,
+				3E76C4A82AF7EB0200E8BBB8 /* PaymentRouter.swift in Sources */,
 				3EB63A132AF7D0AE00EFB6D8 /* ViewController.swift in Sources */,
 				3EEAC0422AF7D70800AF16D3 /* HomeView.swift in Sources */,
 				3EEAC0452AF7D70800AF16D3 /* HomeRouter.swift in Sources */,
 				3E76C49F2AF7E0E600E8BBB8 /* TransactionHistory.swift in Sources */,
 				3EB63A0F2AF7D0AE00EFB6D8 /* AppDelegate.swift in Sources */,
+				3E76C4A92AF7EB0200E8BBB8 /* PaymentView.swift in Sources */,
 				3EEAC0442AF7D70800AF16D3 /* HomeInteractor.swift in Sources */,
+				3E76C4A62AF7EB0200E8BBB8 /* PaymentInteractor.swift in Sources */,
+				3E76C4A72AF7EB0200E8BBB8 /* PaymentPresenter.swift in Sources */,
 				3EEAC0432AF7D70800AF16D3 /* HomePresenter.swift in Sources */,
 				3EB63A112AF7D0AE00EFB6D8 /* SceneDelegate.swift in Sources */,
 			);

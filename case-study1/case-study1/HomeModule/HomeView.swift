@@ -87,7 +87,14 @@ extension HomeViewController {
         viewController.dismiss(animated: true) {
         
             // Show an alert with the scanned value
-            let alert = UIAlertController(title: "Scanned value", message: value, preferredStyle: .alert)
+            let qrValue = value.split(separator: ".")
+            let arrayValue = qrValue.map {
+                String($0)
+            }
+            TransactionHistory.transaction.append(TransactionHistory(bank: arrayValue[0], id: arrayValue[1], merchant: arrayValue[2], nominal: Int(arrayValue[3]) ?? 0))
+            self.presenter?.toPaymentPage(transaction: TransactionHistory(bank: arrayValue[0], id: arrayValue[1], merchant: arrayValue[2], nominal: Int(arrayValue[3]) ?? 0))
+            print(arrayValue)
+            let alert = UIAlertController(title: "Scanned value", message: "Transaction Success", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             self.present(alert, animated: true)
         }
