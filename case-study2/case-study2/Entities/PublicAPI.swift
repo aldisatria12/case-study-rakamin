@@ -8,10 +8,9 @@
 import Foundation
 
 struct PublicAPI: Codable {
-    let title: String
-    let description: String
-    let auth: String
-    let https: String
-    let cors: String
-    let category: String
+    let name: String
+    let username: String
+    let email: String
+    let phone: String
+    let website: String
 }

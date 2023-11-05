@@ -16,18 +16,7 @@ protocol HomeViewProtocol {
 }
 
 class HomeViewController: UIViewController, HomeViewProtocol, UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return apiList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
-        var content = cell.defaultContentConfiguration()
-        content.text = apiList[indexPath.row].title
-        cell.contentConfiguration = content
-        return cell
-    }
-    
+
     private let tableView: UITableView = UITableView()
     private let messageLabel: UILabel = UILabel()
     
@@ -97,5 +86,25 @@ extension HomeViewController {
             messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
         
+    }
+}
+
+extension HomeViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.tapOnDetail(apiList[indexPath.row])
+    }
+}
+
+extension HomeViewController {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return apiList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        var content = cell.defaultContentConfiguration()
+        content.text = apiList[indexPath.row].name
+        cell.contentConfiguration = content
+        return cell
     }
 }
