@@ -36,6 +36,7 @@ extension HomeViewController {
         scanButton.addTarget(self, action: #selector(scanButtonTapped), for: .touchUpInside)
         historyButton.setTitle("Riwayat Transaksi", for: .normal)
         historyButton.setTitleColor(.systemBlue, for: .normal)
+        historyButton.addTarget(self, action: #selector(historyButtonTapped), for: .touchUpInside)
         saldoLabel.textColor = .black
 //        tableView.translatesAutoresizingMaskIntoConstraints = false
 //        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
@@ -58,6 +59,10 @@ extension HomeViewController {
     @objc func scanButtonTapped() {
         print("Button tapped!")
         scanQRCode()
+    }
+    @objc func historyButtonTapped() {
+        print("Button tapped!")
+        presenter?.toHistoryPage()
     }
 }
 

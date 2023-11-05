@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E119D622AF7F80000400458 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E119D5E2AF7F7FF00400458 /* HistoryView.swift */; };
+		3E119D632AF7F80000400458 /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E119D5F2AF7F7FF00400458 /* HistoryPresenter.swift */; };
+		3E119D642AF7F80000400458 /* HistoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E119D602AF7F7FF00400458 /* HistoryInteractor.swift */; };
+		3E119D652AF7F80000400458 /* HistoryRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E119D612AF7F80000400458 /* HistoryRouter.swift */; };
 		3E76C49F2AF7E0E600E8BBB8 /* TransactionHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C49E2AF7E0E600E8BBB8 /* TransactionHistory.swift */; };
 		3E76C4A12AF7E0F100E8BBB8 /* Saldo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C4A02AF7E0F100E8BBB8 /* Saldo.swift */; };
 		3E76C4A62AF7EB0200E8BBB8 /* PaymentInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E76C4A22AF7EB0100E8BBB8 /* PaymentInteractor.swift */; };
@@ -50,6 +54,10 @@
 /* Begin PBXFileReference section */
 		05F90F30BB12B70EA20612CB /* Pods-case-study1Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-case-study1Tests.debug.xcconfig"; path = "Target Support Files/Pods-case-study1Tests/Pods-case-study1Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		221322A46AC875A659A0060F /* Pods_case_study1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_case_study1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E119D5E2AF7F7FF00400458 /* HistoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		3E119D5F2AF7F7FF00400458 /* HistoryPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		3E119D602AF7F7FF00400458 /* HistoryInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryInteractor.swift; sourceTree = "<group>"; };
+		3E119D612AF7F80000400458 /* HistoryRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryRouter.swift; sourceTree = "<group>"; };
 		3E76C49E2AF7E0E600E8BBB8 /* TransactionHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistory.swift; sourceTree = "<group>"; };
 		3E76C4A02AF7E0F100E8BBB8 /* Saldo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saldo.swift; sourceTree = "<group>"; };
 		3E76C4A22AF7EB0100E8BBB8 /* PaymentInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentInteractor.swift; sourceTree = "<group>"; };
@@ -198,6 +206,10 @@
 		3EEAC03C2AF7D4CB00AF16D3 /* HistoryModule */ = {
 			isa = PBXGroup;
 			children = (
+				3E119D602AF7F7FF00400458 /* HistoryInteractor.swift */,
+				3E119D5F2AF7F7FF00400458 /* HistoryPresenter.swift */,
+				3E119D612AF7F80000400458 /* HistoryRouter.swift */,
+				3E119D5E2AF7F7FF00400458 /* HistoryView.swift */,
 			);
 			path = HistoryModule;
 			sourceTree = "<group>";
@@ -471,12 +483,16 @@
 				3EEAC0452AF7D70800AF16D3 /* HomeRouter.swift in Sources */,
 				3E76C49F2AF7E0E600E8BBB8 /* TransactionHistory.swift in Sources */,
 				3EB63A0F2AF7D0AE00EFB6D8 /* AppDelegate.swift in Sources */,
+				3E119D622AF7F80000400458 /* HistoryView.swift in Sources */,
 				3E76C4A92AF7EB0200E8BBB8 /* PaymentView.swift in Sources */,
 				3EEAC0442AF7D70800AF16D3 /* HomeInteractor.swift in Sources */,
+				3E119D652AF7F80000400458 /* HistoryRouter.swift in Sources */,
+				3E119D632AF7F80000400458 /* HistoryPresenter.swift in Sources */,
 				3E76C4A62AF7EB0200E8BBB8 /* PaymentInteractor.swift in Sources */,
 				3E76C4A72AF7EB0200E8BBB8 /* PaymentPresenter.swift in Sources */,
 				3EEAC0432AF7D70800AF16D3 /* HomePresenter.swift in Sources */,
 				3EB63A112AF7D0AE00EFB6D8 /* SceneDelegate.swift in Sources */,
+				3E119D642AF7F80000400458 /* HistoryInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
