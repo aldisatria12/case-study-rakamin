@@ -8,9 +8,13 @@
 import Foundation
 
 struct Transaction: Codable {
-    let label: String
-    let percentage: String
-    let data: [TransactionDetail]
+    let trxDate: String
+    let nominal: Int
+
+    enum CodingKeys: String, CodingKey {
+        case trxDate = "trx_date"
+        case nominal
+    }
 }
 
 extension Bundle {

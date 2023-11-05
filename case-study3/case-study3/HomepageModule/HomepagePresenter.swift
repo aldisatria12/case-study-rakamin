@@ -6,3 +6,40 @@
 //
 
 import Foundation
+
+protocol HomepagePresenterProtocol {
+    var router: HomepageRouterProtocol? {get set}
+    var view: HomepageViewProtocol? {get set}
+    var interactor: HomepageInteractorProtocol? {get set}
+    
+    func viewDidLoad()
+    func interactorWithData(result: Result<[ChartData], Error>)
+    func tapOnDetail(_ transaction: ChartData)
+    
+}
+
+class HomepagePresenter: HomepagePresenterProtocol {
+    var router: HomepageRouterProtocol?
+    
+    var view: HomepageViewProtocol?
+    
+    var interactor: HomepageInteractorProtocol?
+    
+    func viewDidLoad() {
+        interactor?.getTransactionData()
+    }
+    
+    func interactorWithData(result: Result<[ChartData], Error>) {
+        switch result {
+        case .success(let transaction):
+            view?.update(with: transaction)
+        case . failure(let error):
+            print(error)
+            view?.update(with: "Try again later")
+        }
+    }
+    
+    func tapOnDetail(_ transaction: ChartData) {
+        return
+    }
+}
